@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+
+    <h1>"HOME"</h1>
+
+    <p>
+        <%= startingLines %>
+    </p>
+    <br>
+
+    <% for(var i=0; i<posts.length; i++){ %>
+        <h2>
+            <%= posts[i].title %>
+        </h2>
+
+        <p>
+            <%= posts[i].body.substring(0, 100) + '...' %>
+                <a href="/<%=posts[i].title%>">Read More</a>
+
+        </p>
+        <br>
+        <% } %>
